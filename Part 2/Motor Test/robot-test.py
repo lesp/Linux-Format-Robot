@@ -1,14 +1,14 @@
 from gpiozero import PWMOutputDevice
 from time import sleep
-rra = PWMOutputDevice(14,initial_value=0)
-rrb = PWMOutputDevice(15,initial_value=0)
-lra = PWMOutputDevice(18,initial_value=0)
-lrb = PWMOutputDevice(23,initial_value=0)
+rra = PWMOutputDevice(14,initial_value=0) #right rear motor terminal a
+rrb = PWMOutputDevice(15,initial_value=0) #right rear motor terminal b
+lra = PWMOutputDevice(18,initial_value=0) #left rear motor terminal a
+lrb = PWMOutputDevice(23,initial_value=0) #left rear motor terminal b
 
-fra = PWMOutputDevice(24,initial_value=0)
-frb = PWMOutputDevice(25,initial_value=0)
-fla = PWMOutputDevice(8,initial_value=0)
-flb = PWMOutputDevice(7,initial_value=0)
+fra = PWMOutputDevice(24,initial_value=0) #front right motor terminal a
+frb = PWMOutputDevice(25,initial_value=0) #front right motor terminal b
+fla = PWMOutputDevice(8,initial_value=0) #front left motor terminal a
+flb = PWMOutputDevice(7,initial_value=0) front left motor terminal b
 
 def forward(speed):
     rra.value = speed
