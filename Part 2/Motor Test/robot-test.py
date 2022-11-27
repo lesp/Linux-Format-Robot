@@ -31,13 +31,25 @@ def backward(speed):
     fra.value = 0
     frb.value = speed
 
-def lratest(speed):
-    lra.value = speed
-    lrb.value = 0
-    sleep(2)
+def spin_left(speed):
+    rra.value = speed
+    rrb.value = 0
     lra.value = 0
     lrb.value = speed
+    fla.value = 0
+    flb.value = speed
+    fra.value = speed
+    frb.value = 0
 
+def spin_right(speed):
+    rra.value = 0
+    rrb.value = speed
+    lra.value = speed
+    lrb.value = 0
+    fla.value = speed
+    flb.value = 0
+    fra.value = 0
+    frb.value = speed
 
 def stop():
     rra.value = 0
@@ -51,7 +63,11 @@ def stop():
     print("ALL STOP")
 
 forward(1.0)
-sleep(10)
+sleep(5)
 backward(1.0)
-sleep(10)
+sleep(5)
+spin_left(1.0)
+sleep(5)
+spin_right(1.0)
+sleep(5)
 stop()
