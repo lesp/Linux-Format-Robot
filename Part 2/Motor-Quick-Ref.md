@@ -1,4 +1,4 @@
-#Motor Connection Quick Reference
+# Motor Connection Quick Reference
 
 | Object Name | Motor Connection | Motor Input     | Raspberry Pi GPIO |
 |-------------|------------------|-----------------|-------------------|
