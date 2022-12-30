@@ -1,4 +1,4 @@
-from gpiozero import PWMOutputDevice, Button
+from gpiozero import PWMOutputDevice, Button, DistanceSensor
 from time import sleep
 rra = PWMOutputDevice(14,initial_value=0) #right rear motor terminal a
 rrb = PWMOutputDevice(15,initial_value=0) #right rear motor terminal b
@@ -11,6 +11,7 @@ fla = PWMOutputDevice(8,initial_value=0) #front left motor terminal a
 flb = PWMOutputDevice(7,initial_value=0) #front left motor terminal b
 
 bump = Button(2)
+sensor = DistanceSensor(3, 4)
 
 def forward(speed):
     rra.value = speed
@@ -69,3 +70,7 @@ def impact():
     stop()
     backward(0.5)
     sleep(2)
+
+def ultra():
+    print('Distance to nearest object is', sensor.distance, 'm')
+    return(sensor.distance)
