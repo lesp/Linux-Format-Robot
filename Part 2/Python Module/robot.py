@@ -8,7 +8,7 @@ lrb = PWMOutputDevice(23,initial_value=0) #left rear motor terminal b
 fra = PWMOutputDevice(24,initial_value=0) #front right motor terminal a
 frb = PWMOutputDevice(25,initial_value=0) #front right motor terminal b
 fla = PWMOutputDevice(8,initial_value=0) #front left motor terminal a
-flb = PWMOutputDevice(7,initial_value=0) front left motor terminal b
+flb = PWMOutputDevice(7,initial_value=0) #front left motor terminal b
 
 def forward(speed):
     rra.value = speed
