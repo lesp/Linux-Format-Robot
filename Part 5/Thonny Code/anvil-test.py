@@ -2,7 +2,7 @@ import robot
 import anvil.server
 from signal import pause
 import time
-anvil.server.connect("server_GZS5U6CYOSNNSDAZMOEW7FRZ-CQ25HSIID3WXLZMU")
+anvil.server.connect("ANVIL SERVER UPLINK KEY HERE")
 
 @anvil.server.callable
 def stop():
