@@ -23,17 +23,18 @@ def forward(speed):
     flb.value = 0
     fra.value = speed
     frb.value = 0
+    print("Forward")
 
 def backward(speed):
     rra.value = 0
     rrb.value = speed
     lra.value = 0
     lrb.value = speed
-
     fla.value = 0
     flb.value = speed
     fra.value = 0
     frb.value = speed
+    print("Backward")
 
 def spin_left(speed):
     rra.value = speed
@@ -44,6 +45,7 @@ def spin_left(speed):
     flb.value = speed
     fra.value = speed
     frb.value = 0
+    print("Spin Left")
 
 def spin_right(speed):
     rra.value = 0
@@ -54,6 +56,7 @@ def spin_right(speed):
     flb.value = 0
     fra.value = 0
     frb.value = speed
+    print("Spin Right")
 
 def stop():
     rra.value = 0
@@ -81,6 +84,17 @@ def make_space():
     sleep(0.2)
     print("stop")
     stop()
+    
+def slide_right(speed):
+    rra.value = speed
+    rrb.value = 0
+    lra.value = 0
+    lrb.value = speed
+    fla.value = speed
+    flb.value = 0
+    fra.value = 0
+    frb.value = speed
+    print("Spin Right")
 
 def impact():
     print("IMPACT")
@@ -95,7 +109,7 @@ def obstacle():
 def ultra():
     distance = round(sensor.distance*100,2)
     print('Distance to nearest object is', distance, 'cm')
-    if distance < 50:
+    if distance < 15:
         make_space()
     else:
         forward(0.5)
