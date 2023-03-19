@@ -84,6 +84,17 @@ def make_space():
     sleep(0.2)
     print("stop")
     stop()
+
+def slide_left(speed):
+    rra.value = 0
+    rrb.value = speed
+    lra.value = speed
+    lrb.value = 0
+    fla.value = 0
+    flb.value = speed
+    fra.value = speed
+    frb.value = 0
+    print("Slide Left")
     
 def slide_right(speed):
     rra.value = speed
@@ -94,7 +105,9 @@ def slide_right(speed):
     flb.value = 0
     fra.value = 0
     frb.value = speed
-    print("Spin Right")
+    print("Slide Right")
+    
+
 
 def impact():
     print("IMPACT")
